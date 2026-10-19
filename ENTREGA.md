@@ -5,7 +5,7 @@
 | Historia                 | Estado (completa · parcial · no la empecé) | Comentario                                                                                          |
 | ------------------------ | ------------------------------------------ | --------------------------------------------------------------------------------------------------- |
 | HU-01 Ver el menú        | completa                                   | tarde un poco porque habia copiado mal mis credenciales de firebase y no lograba encontrar el error |
-| HU-02 Armar la orden     |                                            |                                                                                                     |
+| HU-02 Armar la orden     | completa                                   |                                                                                                     |
 | HU-03 Ver el total       |                                            |                                                                                                     |
 | HU-04 Confirmar la orden |                                            |                                                                                                     |
 | HU-05 Ajustar cantidades |                                            |                                                                                                     |
