@@ -5,16 +5,39 @@ import { useEffect, useState } from 'react'
 import Menu from './components/Menu'
 import Orden from './components/Orden'
 import Confirmacion from './components/Confirmacion'
-import { crearOrden } from './logic/orden'
+import {
+  MENSAJES,
+  agregarPlatillo,
+  asignarMesa,
+  calcularTotal,
+  cambiarCantidad,
+  crearOrden,
+  quitarPlatillo,
+  validarOrden,
+} from './logic/orden'
 import { cargarMenu } from './data/menu'
 import { guardarOrden } from './data/ordenes'
 
 export default function App() {
   const [menu, setMenu] = useState([])
   const [orden, setOrden] = useState(crearOrden())
-  // TODO: los demás estados que necesites (cargando, mensajes de error, folio...)
+  const [cargando, setCargando] = useState(true)
+  const [errorMenu, setErrorMenu] = useState(false)
+  const [errores, setErrores] = useState([])
+  const [folio, setFolio] = useState(null)
+  const [enviando, setEnviando] = useState(false)
 
-  // TODO HU-01 · RNF-04: cargar el menú UNA sola vez al montar el componente.
+  // HU-01 se carga el menu una sola vez
+  useEffect(() => {
+    cargarMenu()
+      .then((platillos) => setMenu(platillos))
+      .catch((error) => {
+        console.error(error)
+        setErrorMenu(true)
+      })
+      .finally(() => setCargando(false))
+  }, [])
+
 
   // TODO HU-02, HU-03: manejadores que llamen a las funciones de src/logic/orden.js.
   //       Aquí no se escriben reglas: solo se llaman.
