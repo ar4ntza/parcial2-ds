@@ -2,16 +2,16 @@
 
 ## Lo que terminé
 
-| Historia | Estado (completa · parcial · no la empecé) | Comentario |
-| --- | --- | --- |
-| HU-01 Ver el menú | | |
-| HU-02 Armar la orden | | |
-| HU-03 Ver el total | | |
-| HU-04 Confirmar la orden | | |
-| HU-05 Ajustar cantidades | | |
-| HU-06 Platillos agotados | | |
-| HU-07 Si algo falla | | |
-| HU-08 Notas por platillo | | |
+| Historia                 | Estado (completa · parcial · no la empecé) | Comentario                                                                                          |
+| ------------------------ | ------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| HU-01 Ver el menú        | completa                                   | tarde un poco porque habia copiado mal mis credenciales de firebase y no lograba encontrar el error |
+| HU-02 Armar la orden     |                                            |                                                                                                     |
+| HU-03 Ver el total       |                                            |                                                                                                     |
+| HU-04 Confirmar la orden |                                            |                                                                                                     |
+| HU-05 Ajustar cantidades |                                            |                                                                                                     |
+| HU-06 Platillos agotados |                                            |                                                                                                     |
+| HU-07 Si algo falla      |                                            |                                                                                                     |
+| HU-08 Notas por platillo |                                            |                                                                                                     |
 
 ## Lo que no alcancé y por qué
 
