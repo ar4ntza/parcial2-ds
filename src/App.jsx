@@ -51,6 +51,30 @@ export default function App() {
     setOrden((actual) => quitarPlatillo(actual, id))
   }
 
+  // hu03 total
+  const total = calcularTotal(orden)
+
+  let contenidoMenu
+  if (cargando) {
+    contenidoMenu = <p>Cargando menú…</p>
+  } else if (errorMenu) {
+    contenidoMenu = <p role="alert">No se pudo cargar el menú</p>
+  } else {
+    contenidoMenu = <Menu menu={menu} onAgregar={handleAgregar} />
+  }
+
+  //cantidades
+  function handleCambiarCantidad(id, cantidad) {
+    setOrden((actual) => cambiarCantidad(actual, id, cantidad))
+  }
+
+  function handleCambiarMesa(valor) {
+    setOrden((actual) => asignarMesa(actual, valor))
+    setErrores([])
+  }
+
+
+
   // TODO HU-04 · RNF-02: confirmar la orden.
 
   return (
