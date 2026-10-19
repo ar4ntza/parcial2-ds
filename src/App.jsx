@@ -27,7 +27,7 @@ export default function App() {
   const [folio, setFolio] = useState(null)
   const [enviando, setEnviando] = useState(false)
 
-  // HU-01 se carga el menu una sola vez
+  // HU-01-Ver el menú —Must
   useEffect(() => {
     cargarMenu()
       .then((platillos) => setMenu(platillos))
@@ -41,6 +41,15 @@ export default function App() {
 
   // TODO HU-02, HU-03: manejadores que llamen a las funciones de src/logic/orden.js.
   //       Aquí no se escriben reglas: solo se llaman.
+  function handleAgregar(platillo) {
+    setOrden((actual) => agregarPlatillo(actual, platillo))
+    setErrores([])
+    setFolio(null)
+  }
+
+  function handleQuitar(id) {
+    setOrden((actual) => quitarPlatillo(actual, id))
+  }
 
   // TODO HU-04 · RNF-02: confirmar la orden.
 
